@@ -123,7 +123,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./assets/pink-stripes-new.png");
+  background-image: url("./assets/pink-stripes.png");
   background-size: cover;
   background-position: center;
   opacity: 0.4;
@@ -145,6 +145,8 @@ p {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   padding-top: 28px;
 }
 
@@ -152,11 +154,12 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./assets/pink-stripes-new.png");
+  background-image: url("./assets/pink-stripes.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.26;
+  opacity: 0.38;
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero .wrap {
