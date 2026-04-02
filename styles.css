@@ -123,11 +123,14 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./assets/pink-stripes.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.4;
+  background-color: var(--cream);
+  background-image: url("assets/pink-stripes.png");
+  background-repeat: repeat;
+  background-size: 420px auto;
+  background-position: top center;
+  opacity: 0.55;
   pointer-events: none;
+  z-index: 0;
 }
 
 .section-stripes > .wrap {
@@ -154,10 +157,12 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./assets/pink-stripes.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.38;
+  background-color: var(--cream);
+  background-image: url("assets/pink-stripes.png");
+  background-repeat: repeat;
+  background-size: 420px auto;
+  background-position: top center;
+  opacity: 0.45;
   pointer-events: none;
   z-index: 0;
 }
@@ -242,6 +247,8 @@ p {
   height: 380px;
   object-fit: cover;
   object-position: center 18%;
+  transform: scale(1.14);
+  transform-origin: center 22%;
   display: block;
 }
 
