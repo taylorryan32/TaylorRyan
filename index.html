@@ -184,7 +184,8 @@
                   poster="./assets/pso-feed-1.png"
                   data-autoplay-on-view
                 >
-                  <source src="./assets/pso-instagram-feed.mov" />
+                  <source src="./assets/pso-instagram-feed.m4v" type="video/mp4" />
+                  <source src="./assets/pso-instagram-feed.mov" type="video/quicktime" />
                   Your browser does not support embedded videos.
                 </video>
               </div>
@@ -333,6 +334,7 @@
         videos.forEach(function (video) {
           video.muted = true;
           video.defaultMuted = true;
+          video.playsInline = true;
           observer.observe(video);
         });
       })();
