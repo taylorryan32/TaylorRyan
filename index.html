@@ -20,7 +20,13 @@
     <header class="topbar">
       <div class="wrap nav">
         <a class="logo" href="#top">Taylor Ryan</a>
-        <nav class="nav-links">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+        <label for="nav-toggle" class="nav-burger" aria-label="Open menu">
+          <span class="nav-burger-line"></span>
+          <span class="nav-burger-line"></span>
+          <span class="nav-burger-line"></span>
+        </label>
+        <nav class="nav-links" aria-label="Primary">
           <a href="#projects">Projects</a>
           <a href="#pso">PSO Marketing</a>
           <a href="#experience">Experience</a>
@@ -93,7 +99,14 @@
 
             <article class="card project project--clickable">
               <a class="project-link" href="#pso-website" aria-label="View PSO website redesign case study details">
-                <img class="project-img-top" src="./assets/pso-website-redesign.png" alt="PSO website redesign screenshot" />
+                <img
+                  class="project-img-top"
+                  src="./assets/pso-website-redesign.png"
+                  width="1024"
+                  height="594"
+                  alt="PSO website redesign screenshot"
+                  onerror="this.onerror=null;this.src='./assets/pso-website-homepage.png';"
+                />
                 <div class="project-body">
                   <h3>PSO Website Redesign (Squarespace)</h3>
                   <p>Redesigned the PSO website to improve layout clarity and make member-facing information easier to navigate.</p>
@@ -200,7 +213,14 @@
               <p class="ownership-note">
                 Platform: Squarespace. This screenshot is from the version I designed during my role period.
               </p>
-              <img class="case-image case-image--full" src="./assets/pso-website-homepage.png" alt="PSO website homepage screenshot by Taylor Ryan" />
+              <img
+                class="case-image case-image--full"
+                src="./assets/pso-website-homepage.png"
+                width="1024"
+                height="615"
+                alt="PSO website homepage screenshot by Taylor Ryan"
+                onerror="this.onerror=null;this.src='./assets/pso-website-redesign.png';"
+              />
             </article>
           </div>
         </div>
@@ -336,6 +356,21 @@
           video.defaultMuted = true;
           video.playsInline = true;
           observer.observe(video);
+        });
+      })();
+      (function () {
+        var toggle = document.getElementById("nav-toggle");
+        if (!toggle) return;
+        var burger = document.querySelector(".nav-burger");
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            toggle.checked = false;
+            if (burger) burger.setAttribute("aria-label", "Open menu");
+          });
+        });
+        toggle.addEventListener("change", function () {
+          if (!burger) return;
+          burger.setAttribute("aria-label", toggle.checked ? "Close menu" : "Open menu");
         });
       })();
     </script>
