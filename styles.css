@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 76px;
 }
 
 body {
@@ -159,11 +160,10 @@ p {
 
 .section {
   position: relative;
-  padding: 44px 0;
+  padding: 72px 0;
 }
 
 .section-alt {
-  background: #fff;
   border-block: 1px solid #efe4e8;
 }
 
@@ -290,29 +290,22 @@ p {
   position: relative;
   max-width: 420px;
   margin-left: auto;
+  background: var(--cream);
+  border: none;
 }
 
 .hero-card img {
   width: 100%;
   height: 380px;
   object-fit: cover;
-  object-position: center 18%;
-  transform: scale(1.14);
-  transform-origin: center 22%;
+  object-position: center 15%;
   display: block;
 }
 
 .hero-overlay {
-  position: static;
-  width: calc(100% - 28px);
-  max-width: none;
-  margin: 12px 14px 14px;
-  background: rgba(253, 248, 246, 0.95);
-  border: 1px solid #eadde1;
-  border-radius: 14px;
-  padding: 10px 12px;
+  padding: 26px 20px 22px;
   display: grid;
-  gap: 3px;
+  gap: 4px;
   font-size: 0.9rem;
 }
 
@@ -337,6 +330,44 @@ p {
 
 .project-img-top {
   object-position: top center;
+}
+
+.project-logo-band {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.project-logo-band--etsy {
+  background: #f1641e;
+}
+
+.project-logo-band--instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.project-logo-band--squarespace {
+  background: #f5f5f5;
+}
+
+.proj-logo-svg {
+  width: 72px;
+  height: 72px;
+  display: block;
+}
+
+.proj-logo-svg--wide {
+  width: 200px;
+  height: 60px;
+}
+
+.proj-logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
 }
 
 .project-body {
@@ -457,21 +488,292 @@ p {
   gap: 10px;
 }
 
-.pso-layout {
-  margin-top: 12px;
+.pso-showcase {
+  margin-top: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  align-items: start;
+  gap: 16px;
+  align-items: center;
 }
 
-.pso-layout > * {
-  min-width: 0;
+.pso-web-col {
+  grid-column: 1 / -1;
 }
 
-.pso-left {
-  display: grid;
+.pso-card-top {
+  display: flex;
+  align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.pso-card-top h3 {
+  margin: 0;
+}
+
+/* iPhone mockup */
+.phone-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.iphone {
+  position: relative;
+  width: 220px;
+  background: #1a1a1a;
+  border-radius: 46px;
+  padding: 12px;
+  box-shadow:
+    0 0 0 1px #3d3d3d,
+    0 0 0 2px #1a1a1a,
+    0 0 0 3px #4a4a4a,
+    0 28px 56px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Mute switch */
+.iphone-btn-mute {
+  position: absolute;
+  left: -3px;
+  top: 62px;
+  width: 3px;
+  height: 18px;
+  background: #3a3a3a;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Volume up */
+.iphone-btn-vol-up {
+  position: absolute;
+  left: -3px;
+  top: 92px;
+  width: 3px;
+  height: 30px;
+  background: #3a3a3a;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Volume down */
+.iphone-btn-vol-down {
+  position: absolute;
+  left: -3px;
+  top: 132px;
+  width: 3px;
+  height: 30px;
+  background: #3a3a3a;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Power button */
+.iphone-btn-power {
+  position: absolute;
+  right: -3px;
+  top: 104px;
+  width: 3px;
+  height: 44px;
+  background: #3a3a3a;
+  border-radius: 0 2px 2px 0;
+}
+
+.iphone-screen {
+  background: #fff;
+  border-radius: 38px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.iphone-island {
+  width: 92px;
+  height: 28px;
+  background: #000;
+  border-radius: 20px;
+  margin: 10px auto 2px;
+  flex-shrink: 0;
+}
+
+.iphone-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 16px 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+/* Instagram-style nav bar */
+.ig-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 14px 6px;
+  border-bottom: 1px solid #efefef;
+  flex-shrink: 0;
+}
+
+.ig-nav strong {
+  font-size: 0.8rem;
+  color: #1a1a1a;
+  font-family: Inter, sans-serif;
+}
+
+/* Profile row */
+.ig-profile-row {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px 6px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ig-avatar-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.ig-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #fff;
+}
+
+.ig-stats-row {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.ig-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.ig-stat strong {
+  font-size: 0.75rem;
+  color: #1a1a1a;
+  font-family: Inter, sans-serif;
+  line-height: 1;
+}
+
+.ig-stat span {
+  font-size: 0.58rem;
+  color: #1a1a1a;
+  font-family: Inter, sans-serif;
+}
+
+.ig-bio-area {
+  padding: 0 12px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.ig-bio-area strong {
+  font-size: 0.65rem;
+  color: #1a1a1a;
+  font-family: Inter, sans-serif;
+}
+
+.ig-bio-area span {
+  font-size: 0.58rem;
+  color: #555;
+  font-family: Inter, sans-serif;
+  line-height: 1.3;
+}
+
+.ig-actions {
+  display: flex;
+  gap: 5px;
+  padding: 0 12px 8px;
+  flex-shrink: 0;
+}
+
+.ig-btn {
+  flex: 1;
+  padding: 4px 0;
+  border-radius: 8px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  border: 1px solid #dbdbdb;
+  background: #0095f6;
+  color: #fff;
+  cursor: default;
+  font-family: Inter, sans-serif;
+}
+
+.ig-btn-sec {
+  background: #efefef;
+  color: #1a1a1a;
+}
+
+/* Grid tabs */
+.ig-tabs {
+  display: flex;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  flex-shrink: 0;
+}
+
+.ig-tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  opacity: 0.4;
+  cursor: default;
+}
+
+.ig-tab-active {
+  opacity: 1;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+/* Post grid */
+.iphone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: #dbdbdb;
+}
+
+.iphone-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.iphone-home-bar {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iphone-home-bar::after {
+  content: '';
+  width: 110px;
+  height: 5px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  opacity: 0.15;
 }
 
 .feed-video-wrap {
@@ -522,7 +824,325 @@ p {
 }
 
 .footer {
+}
+
+/* Competition cards */
+.comp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.comp-photo {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  flex-shrink: 0;
+}
+
+.comp-photo-clip {
+  height: 460px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.comp-photo--portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: scale(1.35) translateY(8%);
+  transform-origin: center center;
+  display: block;
+}
+
+.comp-card .comp-header,
+.comp-card .comp-desc,
+.comp-card ul,
+.comp-card .comp-skills {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.comp-card .comp-header {
+  padding-top: 16px;
+}
+
+.comp-card .comp-skills {
+  padding-bottom: 16px;
+}
+
+.comp-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.comp-badge {
+  background: var(--charcoal);
+  color: var(--cream);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 6px 10px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.comp-header h3 {
+  margin: 0 0 3px;
+  font-size: 1.05rem;
+}
+
+.comp-school {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.comp-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+.comp-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.comp-skills {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #eadde1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comp-skills-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--charcoal);
+}
+
+.comp-skills span:last-child {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* Browser mockup */
+.browser-frame {
+  margin-top: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2d5d9;
+  box-shadow: 0 8px 24px rgba(47, 47, 47, 0.1);
+}
+
+.browser-bar {
+  background: #f1eded;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e2d5d9;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.browser-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: block;
+}
+
+.browser-dot-red    { background: #ff5f57; }
+.browser-dot-yellow { background: #ffbd2e; }
+.browser-dot-green  { background: #28c840; }
+
+.browser-url {
+  flex: 1;
   background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #666;
+  font-family: Inter, sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.browser-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.browser-screen {
+  background: #fff;
+  overflow: hidden;
+  max-height: 420px;
+}
+
+.browser-screen img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Etsy shop showcase */
+.etsy-stats-row {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 24px;
+  flex-wrap: wrap;
+}
+
+.etsy-stat {
+  background: #fff;
+  border: 1px solid #eadde1;
+  border-radius: 14px;
+  padding: 14px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 110px;
+}
+
+.etsy-stat strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--charcoal);
+  line-height: 1;
+}
+
+.etsy-stat span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.etsy-listings {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.etsy-card {
+  background: #fff;
+  border: 1px solid #eadde1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(47, 47, 47, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.etsy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(47, 47, 47, 0.13);
+}
+
+.etsy-card > a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.etsy-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.etsy-card-img-wrap img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.etsy-card:hover .etsy-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.etsy-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--blush);
+  border: 1px solid #e8b5c6;
+  color: var(--charcoal);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+
+.etsy-card-body {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.etsy-card-body h3 {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  color: var(--charcoal);
+}
+
+.etsy-rating {
+  font-size: 0.82rem;
+  color: #c47a2b;
+  font-weight: 600;
+}
+
+.etsy-rating span {
+  color: var(--muted);
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.etsy-view-cta {
+  margin-top: auto;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .footer-row {
@@ -559,7 +1179,7 @@ p {
   }
 
   .section {
-    padding: clamp(26px, 7vw, 44px) 0;
+    padding: clamp(44px, 9vw, 72px) 0;
   }
 
   .wrap {
@@ -570,9 +1190,16 @@ p {
   .project-grid,
   .split,
   .gallery,
-  .pso-layout,
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pso-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .pso-web-col {
+    grid-column: 1;
   }
 
   .nav {
@@ -699,6 +1326,14 @@ p {
   .chips span {
     font-size: 0.8rem;
     padding: 7px 10px;
+  }
+
+  .etsy-listings {
+    grid-template-columns: 1fr;
+  }
+
+  .etsy-stats-row {
+    gap: 8px;
   }
 }
 
