@@ -6,6 +6,14 @@
   --muted: #356353;
   --line: #e8d7dc;
   --shadow-card: 0 1px 0 rgba(31, 79, 63, 0.06), 0 14px 40px rgba(31, 79, 63, 0.07);
+  /* Equal-width pink stripes (cream + blush — same width every band, no bad image tile) */
+  --stripe-pattern: repeating-linear-gradient(
+    90deg,
+    var(--cream) 0,
+    var(--cream) 14px,
+    var(--blush) 14px,
+    var(--blush) 28px
+  );
 }
 
 *,
@@ -169,16 +177,13 @@ p {
   border-block: 1px solid #efe4e8;
 }
 
+/* Pink stripe sections — CSS gradient so every stripe matches */
 .section-stripes::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: var(--cream);
-  background-image: url("assets/pink-stripes.png");
-  background-repeat: repeat;
-  background-size: 420px auto;
-  background-position: top center;
-  opacity: 0.42;
+  background-image: var(--stripe-pattern);
   pointer-events: none;
   z-index: 0;
 }
@@ -208,11 +213,7 @@ p {
   position: absolute;
   inset: 0;
   background-color: var(--cream);
-  background-image: url("assets/pink-stripes.png");
-  background-repeat: repeat;
-  background-size: 420px auto;
-  background-position: top center;
-  opacity: 0.45;
+  background-image: var(--stripe-pattern);
   pointer-events: none;
   z-index: 0;
 }
